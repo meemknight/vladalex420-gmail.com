@@ -1437,7 +1437,7 @@ void Craw::updateMove(float deltaTime, glm::vec2 playerPos, MapData& mapData)
 			if(timeTillAttackPlayer < 0)
 			{
 				attackState = 1;
-				timeTillAttackPlayer = ((rand() % 100) / 100.f) * 2 + 1.f;
+				timeTillAttackPlayer = ((rand() % 100) / 100.f) * 1.5 + 1.f;
 				timeTillChangeDir = (rand() % 200 + 200) / 100.f;
 
 				direction = playerPos - position;
@@ -1451,7 +1451,7 @@ void Craw::updateMove(float deltaTime, glm::vec2 playerPos, MapData& mapData)
 	}
 	else
 	{
-		timeTillAttackPlayer = ((rand() % 100) / 100.f) * 2 + 1.f;
+		timeTillAttackPlayer = ((rand() % 100) / 100.f) * 1.5 + 1.f;
 		attackState = 0;
 	}
 

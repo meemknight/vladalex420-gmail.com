@@ -869,8 +869,8 @@ bool gameLogic(float deltaTime)
 				a.type = (Arrow::ArrowTypes)actualInventorty[currentArrow].type;
 				a.pos = player.pos + glm::vec2(player.dimensions.x / 2, player.dimensions.y / 2);
 				a.shootDir = input::getShootDir({ w / 2,h / 2 });
-				//a.pos.x += a.shootDir.x * BLOCK_SIZE * 0.9;
-				//a.pos.y += a.shootDir.y * BLOCK_SIZE * 0.9;
+				a.pos.x += a.shootDir.x * BLOCK_SIZE * 0.9;
+				a.pos.y += a.shootDir.y * BLOCK_SIZE * 0.9;
 				arrows.push_back(a);
 			}
 		}
